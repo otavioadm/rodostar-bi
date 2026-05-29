@@ -1170,3 +1170,67 @@ width:280px;
 }
 
 }
+@media(max-width:768px){
+
+.topbar{
+height:64px;
+min-height:64px;
+padding:0 10px;
+overflow:visible;
+}
+
+.top-logo{
+height:42px;
+max-width:105px;
+flex-shrink:0;
+}
+
+.top-right{
+gap:6px;
+overflow:visible;
+}
+
+#reloadPowerBI,
+#zoomOutBtn,
+#zoomInBtn,
+#printBtn,
+#fullscreenReportBtn,
+#fullscreenBtn,
+.notification-wrapper{
+display:none !important;
+}
+
+.language-current{
+min-width:118px;
+height:34px;
+padding:0 8px;
+}
+
+.language-current span{
+font-size:10px;
+}
+
+.icon-button{
+width:34px;
+height:34px;
+min-width:34px;
+}
+
+.profile-menu{
+position:fixed !important;
+top:70px !important;
+right:12px !important;
+width:230px !important;
+z-index:999999 !important;
+}
+
+.language-dropdown{
+position:fixed !important;
+top:70px !important;
+right:58px !important;
+left:auto !important;
+width:150px !important;
+z-index:999999 !important;
+}
+
+}
