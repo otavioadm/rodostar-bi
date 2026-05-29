@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RodoStar</title>
+
+<link rel="icon" type="image/png" href="img/favicon.ico.png">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="style.css?v=30">
+
+</head>
+
+<body>
+
+<!-- LOADING SCREEN -->
+
+<div id="loadingScreen">
+
+<img
+id="loadingLogo"
+src="img/Logo-escura.PNG.png"
+class="loading-logo"
+alt="RodoStar">
+
+</div>
+
+<!-- BOTÃO TEMA -->
+
+<button id="tema-btn">◐</button>
+
+<!-- LOGIN -->
+
+<div class="container">
+
+<div class="login-card">
+
+<div class="logo">
+
+<img
+id="logo"
+src="img/Logo-escura.PNG.png"
+alt="RodoStar">
+
+</div>
+
+<div class="campo">
+
+<i class="fa-solid fa-envelope"></i>
+
+<input
+id="email"
+type="email"
+placeholder="E-mail">
+
+</div>
+
+<div class="campo">
+
+<i class="fa-solid fa-lock"></i>
+
+<input
+id="senha"
+type="password"
+placeholder="Senha">
+
+<i id="olho" class="fa-solid fa-eye"></i>
+
+</div>
+
+<a
+href="javascript:void(0)"
+class="esqueceu"
+id="forgotPasswordBtn">
+
+Esqueceu a senha?
+
+</a>
+
+<button class="entrar-btn">
+ENTRAR
+</button>
+
+</div>
+
+</div>
+
+<!-- MODAL RECUPERAR SENHA -->
+
+<div class="forgot-modal" id="forgotModal">
+
+<div class="forgot-box">
+
+<button class="forgot-close" id="forgotClose">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+<h2>Recuperar senha</h2>
+
+<p>
+Informe seu e-mail corporativo para receber
+as instruções de recuperação.
+</p>
+
+<div class="campo forgot-campo">
+
+<i class="fa-solid fa-envelope"></i>
+
+<input
+id="forgotEmail"
+type="email"
+placeholder="E-mail corporativo">
+
+</div>
+
+<button class="forgot-send" id="forgotSend">
+Enviar instruções
+</button>
+
+</div>
+
+</div>
+
+<!-- TOAST -->
+
+<div id="toast" class="toast">
+
+<i
+id="toastIcon"
+class="fa-solid fa-circle-check"></i>
+
+<span id="toastText">
+Mensagem
+</span>
+
+</div>
+
+<!-- EMAIL JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init("_Q_Uv07X2rYAhg7Xw");
+</script>
+
+<!-- SCRIPT -->
+
+<script src="script.js?v=140"></script>
+
+</body>
+</html>

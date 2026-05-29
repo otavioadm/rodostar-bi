@@ -1,0 +1,356 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#F4F4F4;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+transition:.3s;
+overflow:hidden;
+}
+
+#tema-btn{
+position:fixed;
+top:20px;
+right:20px;
+background:none;
+border:none;
+font-size:22px;
+cursor:pointer;
+z-index:1000;
+color:#111;
+}
+
+.container{
+width:340px;
+}
+
+.login-card{
+width:100%;
+padding:32px;
+border-radius:22px;
+background:#FFFFFF;
+border:1px solid #E5E7EB;
+backdrop-filter:blur(18px);
+transition:.3s;
+box-shadow:0 10px 40px rgba(0,0,0,0.15);
+}
+
+body.dark-mode .login-card{
+background:#111827;
+border:1px solid rgba(255,255,255,0.08);
+box-shadow:0 10px 40px rgba(0,0,0,0.35);
+}
+
+.logo{
+display:flex;
+justify-content:center;
+margin-bottom:24px;
+}
+
+.logo img{
+width:165px;
+max-width:100%;
+object-fit:contain;
+transition:.25s;
+filter:drop-shadow(0 4px 10px rgba(0,0,0,.18));
+}
+
+.campo{
+height:46px;
+display:flex;
+align-items:center;
+padding:0 14px;
+margin-bottom:14px;
+border-radius:10px;
+transition:.2s;
+background:#F8FAFC;
+border:1px solid #E5E7EB;
+}
+
+body.dark-mode .campo{
+background:#0F172A;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.campo input{
+width:100%;
+margin-left:10px;
+background:none;
+border:none;
+outline:none;
+font-size:14px;
+color:#111827;
+caret-color:#111827;
+}
+
+body.dark-mode .campo input{
+color:#FFFFFF;
+caret-color:#FFFFFF;
+}
+
+.campo input::placeholder{
+color:#6B7280;
+}
+
+body.dark-mode .campo input::placeholder{
+color:#94A3B8;
+}
+
+.campo i{
+color:#111827;
+}
+
+body.dark-mode .campo i{
+color:#FFFFFF;
+}
+
+.campo i:last-child{
+cursor:pointer;
+}
+
+.esqueceu{
+display:block;
+text-align:right;
+font-size:12px;
+margin-bottom:18px;
+text-decoration:none;
+transition:.2s;
+color:#C89A5A;
+}
+
+.esqueceu:hover{
+opacity:.8;
+}
+
+.entrar-btn{
+width:100%;
+height:48px;
+border:none;
+border-radius:10px;
+font-size:13px;
+font-weight:700;
+cursor:pointer;
+transition:.2s;
+background:#FFFFFF;
+color:#111827;
+border:1px solid #E5E7EB;
+}
+
+body.dark-mode .entrar-btn{
+background:#111827;
+color:#FFFFFF;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.entrar-btn:hover{
+transform:translateY(-1px);
+opacity:.92;
+}
+
+.dark-mode{
+background:#000000;
+}
+
+.dark-mode #tema-btn{
+color:#FFFFFF;
+}
+
+.toast{
+position:fixed;
+right:24px;
+bottom:24px;
+min-height:48px;
+padding:0 18px;
+display:flex;
+align-items:center;
+gap:12px;
+background:#111827;
+color:white;
+border-radius:14px;
+font-size:13px;
+font-weight:600;
+box-shadow:0 14px 35px rgba(0,0,0,.28);
+opacity:0;
+pointer-events:none;
+transform:translateY(14px);
+transition:.25s;
+z-index:999999;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.toast.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.toast.success i{
+color:#22C55E;
+}
+
+.toast.error i{
+color:#EF4444;
+}
+
+.forgot-modal{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.55);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:99999;
+backdrop-filter:blur(4px);
+}
+
+.forgot-box{
+width:380px;
+background:#111827;
+border:1px solid #1E293B;
+border-radius:22px;
+padding:28px;
+position:relative;
+box-shadow:0 20px 60px rgba(0,0,0,.35);
+}
+
+.forgot-close{
+position:absolute;
+top:14px;
+right:14px;
+width:32px;
+height:32px;
+border:none;
+border-radius:10px;
+background:#1F2937;
+color:white;
+cursor:pointer;
+}
+
+.forgot-box h2{
+color:white;
+font-size:20px;
+margin-bottom:10px;
+}
+
+.forgot-box p{
+color:#D1D5DB;
+font-size:13px;
+line-height:1.5;
+margin-bottom:20px;
+}
+
+.forgot-send{
+width:100%;
+height:46px;
+border:none;
+border-radius:14px;
+background:#C79A1B;
+color:#111827;
+font-size:13px;
+font-weight:700;
+cursor:pointer;
+transition:.2s;
+}
+
+.forgot-send:hover{
+background:#F4C542;
+transform:translateY(-1px);
+}
+
+#loadingScreen{
+position:fixed;
+inset:0;
+background:#FFFFFF;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:999999;
+transition:opacity .35s ease, visibility .35s ease;
+}
+
+body.dark-mode #loadingScreen{
+background:#000000;
+}
+
+#loadingScreen.hide{
+opacity:0;
+visibility:hidden;
+pointer-events:none;
+}
+
+.loading-logo{
+width:170px;
+max-width:80vw;
+object-fit:contain;
+filter:drop-shadow(0 0 16px rgba(199,154,27,.32));
+animation:pulseLogo 1.4s infinite ease-in-out;
+}
+
+@keyframes pulseLogo{
+0%{
+transform:scale(1);
+opacity:.80;
+}
+
+50%{
+transform:scale(1.06);
+opacity:1;
+}
+
+100%{
+transform:scale(1);
+opacity:.80;
+}
+}
+
+@media(max-width:768px){
+
+body{
+padding:18px;
+overflow:hidden;
+}
+
+.container{
+width:100%;
+max-width:360px;
+}
+
+.login-card{
+padding:26px;
+}
+
+.logo img{
+width:145px;
+}
+
+.campo{
+height:50px;
+}
+
+.entrar-btn{
+height:50px;
+font-size:14px;
+}
+
+#tema-btn{
+top:18px;
+right:18px;
+}
+
+.loading-logo{
+width:140px;
+}
+
+.toast{
+left:16px;
+right:16px;
+bottom:18px;
+}
+
+}
